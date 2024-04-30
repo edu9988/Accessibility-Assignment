@@ -505,3 +505,28 @@ p, h1, .bugged > * {
     margin: auto;
     text-align: center;
 }
+
+form{
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+    max-width: 400px;
+    background:linear-gradient(
+        #8c7a6b 90%,
+        #413620 10%
+    );
+    justify-content: center;
+    align-items: center;
+}
+
+form > p > * {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+form > p {
+    margin: 10px;
+}
