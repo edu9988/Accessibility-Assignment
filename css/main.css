@@ -501,12 +501,7 @@ img[src$="img-1.jpg"]{
     width: 80%;
 }
 
-.bugged > * {
-    margin: auto;
-    text-align: center;
-}
-
-p {
+p, h1, .bugged > * {
     margin: auto;
     text-align: center;
 }
