@@ -99,45 +99,5 @@
     </div>
 </section>
 
-<script>
-    const controls = document.querySelectorAll('.control');
-    let currentSlide = 0;
-    const items = document.querySelectorAll('.slide');
-    const maxSlides = items.length;
-
-    controls.forEach(control => {
-        control.addEventListener('click', () => {
-            const isLeft = control.classList.contains('arrow-left');
-
-            if(isLeft) {
-                currentSlide -= 1;
-            } else {
-                currentSlide += 1;
-            }
-
-            if(currentSlide >= maxSlides) {
-                currentSlide = 0;
-            }
-
-            if(currentSlide < 0) {
-                currentSlide = maxSlides - 1;
-            }
-
-            items.forEach(slide =>
-                slide.classList.remove('current-slide'));
-
-            items[currentSlide].scrollIntoView({
-                inline: "center",
-                behavior: "smooth",
-                block:"nearest"
-            });
-
-            items[currentSlide].classList.add('current-slide');
-
-        });
-    });
-
-</script>
-
 </body>
 </html>
