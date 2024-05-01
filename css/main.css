@@ -354,7 +354,7 @@ h2 {
 .video-container {
     width: 100%;
     margin: 0;
-    background-color: #D9CAB3;
+    /*background-color: #D9CAB3;*/
 }
 
 iframe{
@@ -561,6 +561,12 @@ tbody tr:nth-child(even) {
 tbody tr:nth-child(odd) {
     background-color: #8c7a6b;
     color: #ffeedb;
+}
+
+.section-video {
+        text-align: center;
+        padding-top: 60px;
+        /*margin-top: 200px;   */
 }
 
 /*
