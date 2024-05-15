@@ -512,7 +512,7 @@ form{
     padding: 20px;
     max-width: 400px;
     background:linear-gradient(
-        #8c7a6b 90%,
+        #A6948C 90%,
         #413620 10%
     );
     justify-content: center;
@@ -559,8 +559,8 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #8c7a6b;
-    color: #ffeedb;
+    background-color: #C9B6B5; /* edited after contrast task */
+    color: #000;
 }
 
 .section-video {
