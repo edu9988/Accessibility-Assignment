@@ -1,4 +1,8 @@
-document.getElementById("contactForm").addEventListener('submit', function(event) {
+let contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
     let valid = true;
 
     const nameRegex = /^[a-zA-ZÀ-ÿ\s]{2,140}$/;
@@ -49,9 +53,31 @@ document.getElementById("contactForm").addEventListener('submit', function(event
         msgError.textContent = '';
     }
 
-    if (!valid) {
-        event.preventDefault();
-    } else {
-        window.location.href = 'index.html';
-    }  
+    if(valid) {
+        let contactData = {
+            fullName: name.value.trim(),
+            email: email.value.trim(),
+            phone: phone.value.trim(),
+            message: msg.value.trim(),
+        };
+        localStorage.setItem('contactData', JSON.stringify(contactData));
+
+        const modal = document.getElementById('successModal');
+        const span = document.getElementsByClassName('close')[0];
+
+        modal.style.display = 'block';
+
+        span.onclick = function() {
+            modal.style.display = 'none';
+        };
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+
+        contactForm.reset();
+    }
+    
 })
