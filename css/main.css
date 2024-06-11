@@ -134,7 +134,7 @@ a{
     vertical-align: middle;
     margin-right: 10px;
 }
-a.br:before {
+a.br:before ,li.br{
     background-image: url("https://flagsapi.com/BR/flat/64.png");
 }
 a.en:before {
