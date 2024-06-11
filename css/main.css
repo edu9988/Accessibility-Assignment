@@ -491,6 +491,9 @@ iframe{
 .tooltip:hover .tooltip-content {
     display: block;
   }
+.tooltip:focus .tooltip-content {
+    display: block;
+  }
 
 img[src$="Vila_Santos.jpg"]{
     width: 100%;
